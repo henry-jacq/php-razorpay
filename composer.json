@@ -4,7 +4,8 @@
         "slim/slim": "4.*",
         "slim/psr7": "^1.6",
         "php-di/php-di": "^7.0",
-        "nesbot/carbon": "^2.68"
+        "nesbot/carbon": "^2.68",
+        "razorpay/razorpay": "2.*"
     },
     "autoload": {
         "psr-4": {

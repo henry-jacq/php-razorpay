@@ -18,7 +18,7 @@ class HomeController extends Controller
     public function index(Request $request, Response $response): Response
     {
         $args = [
-            'title' => 'Home'
+            'title' => 'Payment Gateway'
         ];
         return $this->render($request, $response, 'home', $args);
     }

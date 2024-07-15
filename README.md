@@ -1,5 +1,5 @@
-# Photogram
-A Simple Photo Sharing Application.
+# PHP Razorpay
+A simple payment gateway application using razorpay.
 
 ## Dependencies
 - Sass
