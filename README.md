@@ -1,5 +1,5 @@
-# Slim Starter
-A PHP template framework that hooks slim and other packages.
+# Photogram
+A Simple Photo Sharing Application.
 
 ## Dependencies
 - Sass

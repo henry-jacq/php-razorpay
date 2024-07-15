@@ -77,25 +77,13 @@ function dump($var)
 
 function get_assets($asset) {
     // $asset = "resources/css/app.css";
-    $manifestPath = PUBLIC_PATH . '/build/.vite/manifest.json';
+    $assetPath = RESOURCES_PATH . DIRECTORY_SEPARATOR . $asset;
 
-    if (strtolower($_ENV['APP_ENV']) == 'dev') {
-        if (!file_exists($manifestPath)) {
-            // Handle case where manifest does not exist (e.g., in development)
-            return 'http://localhost:5173/'.$asset;
-        }
-        return 'http://localhost:5173/' . $asset;
+    // Handle production logic here
+
+    if (!file_exists($assetPath)) {
+        throw new Exception("Assets not found!");
     }
 
-    if (!file_exists($manifestPath)) {
-        throw new Exception("Production assets not found!");
-    }
-
-    $manifest = json_decode(file_get_contents($manifestPath), true);
-    if (isset($manifest[$asset])) {
-        return '/build/' . $manifest[$asset]['file'];
-    }
-    
-    // Handle case where the asset is not found in the manifest
-    return $asset;
+    return null;
 }
